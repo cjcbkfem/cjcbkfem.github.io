@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body { margin: 0; padding: 0; font-family:'돋움',Dotum,Helvetica,Sans-serif; font-size: 12px; line-height: 1.5; }
+  p { margin: 0; padding: 0; font-family:'돋움',Dotum,Helvetica,Sans-serif; font-size: 12px; line-height: 1.5; }
+  td, div { font-family:'돋움',Dotum,Helvetica,Sans-serif; font-size: 12px; line-height: 1.5; }
+  
+  /* Style the header */
+  header {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    height: fit-content;
+  }
+  
+  /* Style the navigation links */
+  nav {
+    float: left;
+    width: 20%;
+    background: white;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin-bottom: 10px; /* Adds space between the links */
+  }
+  
+  nav ul li a {
+    text-decoration: none; /* Removes the underline from links */
+    color: #333; /* Dark grey color for the text */
+    background-color: #f2f2f2; /* Light grey background */
+    padding: 10px 15px; /* Padding inside the links */
+    display: block; /* Makes the links take the full width of the container, allowing the padding to be applied properly */
+    border-radius: 5px; /* Rounded corners for aesthetics */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Hover effect for links */
+  nav ul li a:hover {
+    background-color: #ddd; /* Darker grey on hover */
+    color: #000; /* Black color for text on hover */
+    transform: scale(1.05); /* Slightly increase the size */
+  }
+  
+  /* Active link style */
+  nav ul li a.active {
+    background-color: #666; /* Dark grey background for the active link */
+    color: white; /* White text color for active link */
+  }  
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 80%;
+    background-color: white;
+    font-size: 15px;
+  }
+
+  /* Add styles for all tables within the article tag */
+  article table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  /* Style for table cells */
+  article td {
+    border: 0px solid #ddd;
+    padding: 8px;
+    text-align: left; /* or center, depending on what you need */
+  }
+
+  /* Style for responsive images within tables */
+  article img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #059669;
+    padding: 10px;
+    text-align: left;
+    color: white;
+  }
+
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* 이미지 최대 너비 지정 */
+    max-height: 600px;
+  }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    article {
+      width: 100%;
+      height: auto;
+    }
+    .responsive-image {
+      max-width: 271px; /* 화면 너비가 768px 이하인 경우 이미지 최대 너비를 500px로 조정 */
+    }
+    nav {
+      display: none;
+    }
+    article table {
+      width: 100%;
+    }
+    article img {
+      width: 100%; /* Make images responsive within table cells */
+    }
+  }
+  
